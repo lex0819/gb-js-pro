@@ -21,6 +21,7 @@ a {
 
 .container {
   max-width: 1140px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -32,9 +33,14 @@ a {
 
 .navigation {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   gap: 15px;
-  width: 98vw;
+}
+
+.navigation p {
+  color: inherit;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .goods-list {
