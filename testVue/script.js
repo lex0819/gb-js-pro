@@ -15,13 +15,13 @@ var app = new Vue({
     count: 0,
   },
   methods: {
-    reverseMessage: function () {
+    reverseMessage() {
       this.message03 = this.message03.split('').reverse().join('');
     },
   },
   computed: {
-    total: function () {
-      return (this.total = this.price * this.count);
+    total() {
+      return this.price * this.count;
     },
   },
 });
