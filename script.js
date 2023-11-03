@@ -1,9 +1,29 @@
-const goods = [
-  { title: 'Shirt', price: 150 },
-  { title: 'Socks', price: 50 },
-  { title: 'Jacket', price: 350 },
-  { title: 'Shoes', price: 250 },
-];
+
+let goods = [];
+
+const url =
+  'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json';
+
+// const getData = async () => {
+//   const goToServer = await fetch(url);
+//   const result = await goToServer.json();
+//   return result;
+// };
+
+// a = getData();
+
+// console.log(a);
+
+function asinc getData02(url) {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      renderGoodsList(data);
+    })
+    .catch((er) => console.log(er));
+}
+
+getData02(url);
 
 //сразу распакуем item на title и price - деструктуризация
 //чтоб удобнее было потом вызывать эту функцию
