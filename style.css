@@ -1,0 +1,92 @@
+:root {
+  --blue: dodgerblue;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 30px 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.navigation p {
+  color: inherit;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.goods-search {
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  border: transparent;
+}
+
+.goods-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.goods-item {
+  width: 360px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 1px 1px 10px 1px #999;
+}
+
+.goods-item h3,
+.goods-item p {
+  margin-top: 15px;
+}
+
+.cart-button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.cart-button:hover {
+  color: var(--blue);
+  background-color: var(--white);
+  box-shadow: 1px 1px 4px 1px var(--white);
+}
+
+.total {
+  margin-top: 30px;
+}
