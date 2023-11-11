@@ -1,6 +1,5 @@
-const BASE_URL =
-  'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/';
-const GET_GOODS_ITEMS = `${BASE_URL}catalogData.json`;
+const BASE_URL = 'https://apigb.elenivan.ru/getphpservice.php';
+const GET_GOODS_ITEMS = `${BASE_URL}?fname=catalogData`;
 const GET_BASKET_GOODS_ITEMS = `${BASE_URL}getBasket.json`;
 
 function init() {
@@ -60,14 +59,11 @@ function init() {
       isVisibleCard: false,
     },
     mounted() {
-      setTimeout(() => {
-        fetch(GET_GOODS_ITEMS)
-          .then((res) => res.json())
-          .then((data) => {
-            this.items = data;
-          }),
-          5000;
-      });
+      fetch(GET_GOODS_ITEMS)
+        .then((res) => res.json())
+        .then((data) => {
+          this.items = data;
+        });
     },
     methods: {
       setVisibleCard() {
